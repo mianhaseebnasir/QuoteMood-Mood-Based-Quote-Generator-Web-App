@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap">
+</head>
+
+<body>
+    <div class="container">
+        <div class="quote-card">
+            <div class="top-bar">
+                <div class="logo">QuoteMood</div>
+                <div class="icon-btns">
+                    <div class="icon-btn" onclick="toggleFavorite()" id="heartBtn" title="Favorite">♡</div>
+                    <div class="icon-btn" onclick="copyQuote()" title="Copy">📋</div>
+                </div>
+            </div>
+
+            <div class="mood-selector">
+                <div class="mood-label">How are you feeling?</div>
+                <div class="mood-options">
+                    <button class="mood-btn active" onclick="setMood('all')">All</button>
+                    <button class="mood-btn" onclick="setMood('happy')">😊 Happy</button>
+                    <button class="mood-btn" onclick="setMood('motivated')">💪 Motivated</button>
+                    <button class="mood-btn" onclick="setMood('calm')">😌 Calm</button>
+                    <button class="mood-btn" onclick="setMood('inspired')">✨ Inspired</button>
+                </div>
+            </div>
+
+            <div class="quote-content">
+                <div class="quote-text" id="quoteText">Press space or click below to discover your quote</div>
+                <div class="quote-author" id="quoteAuthor"></div>
+            </div>
+
+            <div class="bottom-controls">
+                <button class="btn btn-primary" onclick="newQuote()">Next Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">✓ Copied!</div>
+
+    
+    <script src="js/script.js"></script>
+</body>
+
+</html>
